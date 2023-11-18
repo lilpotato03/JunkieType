@@ -1,0 +1,359 @@
+.th-1{
+    --bg:rgb(236, 227, 206);
+    --sec:rgb(115, 144, 114);
+    --text:rgb(19, 31, 22);
+    --passage_text:rgb(145, 144, 144);
+    --cursor:rgb(79, 111, 82);
+    --incorrect:rgb(234, 58, 9);
+}
+.th-2{
+    --bg:rgb(248, 117, 170);
+    --sec:rgb(112, 171, 208);
+    --text:rgb(255,255,255);
+    --passage_text:rgb(174, 222, 252);
+    --cursor:rgb(255, 246, 246);
+    --incorrect:rgb(13, 35, 49);
+}
+.th-3{
+    --bg:rgb(34, 40, 49);
+    --sec:rgb(57, 62, 70);
+    --text:rgb(2, 192, 202);
+    --passage_text:rgb(146, 146, 146);;
+    --cursor:rgb(32, 236, 185);
+    --incorrect:rgb(32, 236, 69);
+}
+.th-4{
+    --bg:rgb(249, 247, 247);
+    --sec:rgb(63, 114, 175);
+    --text:rgb(17, 45, 78);
+    --passage_text:rgb(103, 145, 196);
+    --cursor:rgb(17, 45, 78);
+    --incorrect:rgb(255, 0, 0);
+}
+.th-5{
+    --bg:rgb(177, 178, 255);
+    --sec:rgb(170, 196, 255);
+    --text:rgb(238, 241, 255);
+    --passage_text:rgb(100, 100, 100);
+    --cursor:rgb(238, 241, 255);
+    --incorrect:rgb(255, 106, 208);
+}
+.th-6{
+    --bg:rgb(168, 230, 207);
+    --sec:rgb(255, 170, 165);
+    --text:rgb(252, 252, 252);
+    --passage_text:rgb(100, 179, 136);
+    --cursor:rgb(220, 237, 193);
+    --incorrect:rgb(80, 247, 97);
+    
+}
+.th-7{
+    --bg:rgb(238, 238, 238);
+    --sec:rgb(78, 79, 235);
+    --text:rgb(0, 0, 0);
+    --passage_text:rgb(48, 47, 47);;
+    --cursor:rgb(6, 143, 255);
+    --incorrect:rgb(255, 6, 6);;
+    
+}
+.th-8{
+    --bg:rgb(3, 0, 28);
+    --sec:rgb(48, 30, 103);
+    --text:rgb(182, 234, 218);
+    --passage_text:rgb(120, 120, 120);
+    --cursor:rgb(91, 143, 185);
+    --incorrect:rgb(85, 53, 189);
+    
+}
+.th-9{
+    --bg:rgb(0,0,0);
+    --sec:rgb(0,0,0);
+    --text:rgb(255,255,255);
+    --passage_text:rgb(163, 163, 163);
+    --cursor:rgb(255,255,255);
+    --incorrect:rgb(255,0,0);
+    
+}
+.th-10{
+    --bg:rgb(255,255,255);
+    --sec:rgb(203, 203, 203);
+    --text:rgb(0,0,0);
+    --passage_text:rgb(73, 73, 73);
+    --cursor:rgb(0,0,0);
+    --incorrect:rgb(255,0,0);
+    
+}
+.apply_secondary{
+    background-color: var(--sec);
+}
+.s0{
+ background-color: var(--bg);
+ border: 3px solid var(--text);
+}
+.s1{
+    background-color: var(--passage_text);
+}
+.s2{
+    background-color: var(--sec);
+}
+.s3{
+    background-color: var(--cursor);
+}
+body{
+    background-color: var(--bg);
+    margin:0;
+    padding:0;
+    overflow: hidden;
+}
+.header{
+    background-color: var(--sec);
+    width:100%;
+    height: 3rem;
+    margin-bottom:4px;
+    display:flex;
+    display: flex;
+
+}
+footer{
+    width:100%;
+    height: 2.2rem;
+    margin:0px;
+    position: fixed;
+    display: flex;
+    left:0px;
+    bottom: 0px;
+    background-color: var(--sec);
+}
+.main{
+    height:85.5vh;
+    display: flex;
+    flex-direction: column;
+}
+.cont{
+    flex: 1;
+    /*border: 1px solid rgb(205, 205, 205);*/
+    color:var(--text);
+}
+.typingtext{
+    flex:4;
+}
+p{
+    color:var(--text);
+    text-align: center;
+}
+.keyboard{
+    flex:5;
+    margin-bottom: 5px;
+}
+.row{
+    display: flex;
+    justify-content: space-around;
+}
+.options-child{
+    flex: 0.7;
+    background-color: var(--sec);
+    border: 4px solid var(--cursor);
+    border-radius: 30px;
+    display: flex;
+    height:70%;
+    justify-content:space-evenly;
+}
+.dictionary-label{
+    flex:0.15;
+}
+.maintyping{
+    flex: 0.7;
+    font-size: small;
+}
+.keys{
+    flex:0.75;
+    display: flex;
+    flex-direction: column;
+}    
+.keysrows{
+    padding: 5px;
+    gap: 4px;
+
+}
+.tilda{
+    flex:0.7;
+}
+.backspace,.tab{
+    flex: 1.4;
+}
+.capslock,.enter{
+    flex: 1.7;
+}
+.shift{
+    flex: 1.8;
+}
+.spacebar{
+    flex: 0.35;
+}
+.key{
+    background-color: var(--sec);
+    border:2px solid var(--cursor);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 2px;
+    border-radius:7px;
+}
+.dictionary-label{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+}
+.logo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bolder;
+}
+.oc-child{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    gap: 8px;
+}
+.extras{
+    flex:1;
+    border-right: 4px solid var(--cursor);
+}
+.mode{
+    border-right: 4px solid var(--cursor);
+    flex: 1.5;
+}
+.img{
+    height:100%;
+    width: auto;
+    
+}
+.clickable:hover{
+    scale:1.02;
+    filter: brightness(1.3);
+    transition: all ease-in-out 0.2s;
+    cursor: pointer;
+}
+.options{
+    flex: 0.5;
+}
+.backtype{
+    color: var(--passage_text);
+    position: fixed;
+    z-index: -1;
+}
+.correct{
+    color: var(--text);
+    margin-top: 2px;
+    margin-bottom: 2px;
+    width:8px;
+    display: flex;
+    justify-content: center;
+}
+.incorrect{
+    width:8px;
+    color: var(--incorrect);
+    margin-top: 2px;
+    margin-bottom: 2px;
+    display: flex;
+    justify-content: center;
+}
+.maintype,.backtype{
+    display: flex;
+    flex-wrap: wrap;
+    inline-size:70vw;
+    flex-direction:row;
+    gap:2px;
+}
+.backed{
+    width:8px;
+    color: var(--passage_text);
+    margin-top: 2px;
+    margin-bottom: 2px;
+    display: flex;
+    justify-content: center;
+}
+.small-logo,.user{
+    height: 4vh;
+    width: auto;
+}
+.refresh,.timer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.account{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.theme-con{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+.themer{
+    flex: 0.1;
+    padding: 5px;
+}
+.tags{
+    margin-left: 8px;
+    margin-right:8px;
+    margin-top: 6px;
+    margin-bottom: 6px;
+    display: flex;
+    border-radius: 15px;
+    padding-left: 3px;
+    padding-right: 3px;
+    gap: 2px;
+    flex:1;
+}
+.shades{
+border-radius: 50%;
+margin-top: 2px;
+margin-bottom: 2px;
+margin-right: 3px;
+margin-left: 3px;
+}
+div[hidden="yescon"]{
+    background-color:var(--currentbg);
+    border: none;
+
+}
+.pressed{
+    filter: brightness(0.7);
+    transform: translateY(2px);
+}
+.filler{
+    color: var(--text);
+    margin-top: 2px;
+    margin-bottom: 2px;
+    width:8px;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+}
+.result{
+    flex: 0.4;
+    width:70vw;
+    align-self: center;
+    display: flex;
+}
+.-r{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height:4vh;
+    
+}
+
+
+
+
+
+

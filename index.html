@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JunkieType</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="manifest" href="site.webmanifest">
+    <link rel="mask-icon" href="safari-pinned-tab.svg" color="##2f2f2f">
+    <meta name="msapplication-TileColor" content="#2f2f2f">
+    <meta name="theme-color" content="#2f2f2f">
+</head>
+<body class="th-10">
+    <div class="header">
+        <div class="cont logo -h"><img src="logo.png" class="img" alt=""></div>
+        <div class="cont settings -h"></div>
+        <div class="cont -h"></div>
+        <div class="cont account -h">
+            <img src="user.png" alt="" class="img user">
+            <p style="margin:6px;" class="username"><b>Aaron</b></p>
+        </div>
+    </div>
+    <div class="main">
+        <div class="cont row options">
+            <div class="cont options-child">
+                <div class="cont extras oc-child">
+                    <p class="clickable">@ punctuation</p>
+                    <p class="clickable"># numbers</p>
+                </div>
+                <div class="cont mode oc-child">
+                    <p class="clickable">🕞 time</p>
+                    <p class="clickable"><b>A</b> words</p>
+                    <p class="clickable"><b>"</b> quote</p>
+                    <p class="clickable">⛰️ zen</p>
+                    <p class="clickable">🔧 custom</p>
+                </div>
+                <div class="cont time oc-child">
+                    <p class="clickable times"><b>10</b></p>
+                    <p class="clickable times"><b>30</b></p>
+                    <p class="clickable times"><b>60</b></p>
+                    <p class="clickable times"><b>100</b></p>
+                    <p class="clickable">🛠️</p>
+                </div>
+            </div>
+        </div>
+        <div class="cont row dictionary">
+            <div class="cont refresh">
+                <img src="refresh.png" alt="" class="small-logo refresh_icon">
+            </div>
+            <div class="cont dictionary-label clickable">English</div>
+            <div class="cont timer"><b>0.0</b></div>
+        </div>
+        <div class="cont row typingtext">
+            <div class="cont maintyping">
+                <div class="backtype"></div>
+                <div class="maintype">
+                </div>
+            </div>
+        </div>
+        <div class="cont result">
+            <div class="cont disp_time -r"><p>time:</p></div>
+            <div class="cont disp_wpm -r"><p>wpm:</p></div>
+            <div class="cont disp_acc -r"><p>accuracy:</p></div>
+        </div>
+        <div class="cont row keyboard">
+            <div class="cont keys">
+                <div class="cont row keysrows">
+                    <div class="cont tilda key">`</div>
+                    <div class="cont key ">1</div>
+                    <div class="cont key ">2</div>
+                    <div class="cont key ">3</div>
+                    <div class="cont key ">4</div>
+                    <div class="cont key ">5</div>
+                    <div class="cont key ">6</div>
+                    <div class="cont key ">7</div>
+                    <div class="cont key ">8</div>
+                    <div class="cont key ">9</div>
+                    <div class="cont key ">0</div>
+                    <div class="cont key ">-</div>
+                    <div class="cont key">=</div>
+                    <div class="cont backspace key">BACKSPACE</div>
+                </div>
+                <div class="cont row keysrows">
+                    <div class="cont tab key">TAB</div>
+                    <div class="cont key">Q</div>
+                    <div class="cont key">W</div>
+                    <div class="cont key">E</div>
+                    <div class="cont key">R</div>
+                    <div class="cont key">T</div>
+                    <div class="cont key">Y</div>
+                    <div class="cont key">U</div>
+                    <div class="cont key">I</div>
+                    <div class="cont key">O</div>
+                    <div class="cont key">P</div>
+                    <div class="cont key">[</div>
+                    <div class="cont key">]</div>
+                    <div class="cont key">\</div>
+                </div>
+                <div class="cont row keysrows"> 
+                    <div class="cont capslock key">CAPS LOCK</div>
+                    <div class="cont key">A</div>
+                    <div class="cont key">S</div>
+                    <div class="cont key">D</div>
+                    <div class="cont key">F</div>
+                    <div class="cont key">G</div>
+                    <div class="cont key">H</div>
+                    <div class="cont key">J</div>
+                    <div class="cont key">K</div>
+                    <div class="cont key">L</div>
+                    <div class="cont key">;</div>
+                    <div class="cont key">'</div>
+                    <div class="cont enter key">ENTER</div>
+                </div>
+                <div class="cont row keysrows">
+                    <div class="cont shift key">SHIFT</div>
+                    <div class="cont key">Z</div>
+                    <div class="cont key">X</div>
+                    <div class="cont key">C</div>
+                    <div class="cont key">V</div>
+                    <div class="cont key">B</div>
+                    <div class="cont key">N</div>
+                    <div class="cont key">M</div>
+                    <div class="cont key">,</div>
+                    <div class="cont key">.</div>
+                    <div class="cont key">/</div>
+                    <div class="cont shift key">SHIFT</div>
+                </div>
+                <div class="cont row keysrows">
+                    <div class="cont spacebar key"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div class="cont themer -f"></div>
+            <div class="cont theme-con -f">
+                <div class="cont tags th-1 s0 " hidden="yescon">
+                    <div class="cont shades s1 " hidden="yes"></div>
+                    <div class="cont shades s2 " hidden="yes"></div>
+                    <div class="cont shades s3 " hidden="yes"></div>
+                </div>
+                <div class="cont tags th-2 s0" hidden="yescon">
+                    <div class="cont shades s1" hidden="yes"></div>
+                    <div class="cont shades s2" hidden="yes"></div>
+                    <div class="cont shades s3" hidden="yes"></div>
+                </div>
+                <div class="cont tags th-3 s0" hidden="yescon">
+                    <div class="cont shades s1" hidden="yes"></div>
+                    <div class="cont shades s2" hidden="yes"></div>
+                    <div class="cont shades s3" hidden="yes"></div>
+                </div>
+                <div class="cont tags th-4 s0" hidden="yescon">
+                    <div class="cont shades s1" hidden="yes"></div>
+                    <div class="cont shades s2" hidden="yes"></div>
+                    <div class="cont shades s3" hidden="yes"></div>
+                </div>
+                <div class="cont tags th-5 s0" hidden="yescon">
+                    <div class="cont shades s1" hidden="yes"></div>
+                    <div class="cont shades s2" hidden="yes"></div>
+                    <div class="cont shades s3" hidden="yes"></div>
+                </div>
+                <div class="cont tags th-6 s0" hidden="yescon">
+                    <div class="cont shades s1" hidden="yes"></div>
+                    <div class="cont shades s2" hidden="yes"></div>
+                    <div class="cont shades s3" hidden="yes"></div>
+                </div>
+                <div class="cont tags th-7 s0" hidden="yescon">
+                    <div class="cont shades s1" hidden="yes"></div>
+                    <div class="cont shades s2" hidden="yes"></div>
+                    <div class="cont shades s3" hidden="yes"></div>
+                </div>
+                <div class="cont tags th-8 s0" hidden="yescon">
+                    <div class="cont shades s1" hidden="yes"></div>
+                    <div class="cont shades s2" hidden="yes"></div>
+                    <div class="cont shades s3" hidden="yes"></div>
+                </div>
+                <div class="cont tags th-9 s0" hidden="yescon">
+                    <div class="cont shades s1" hidden="yes"></div>
+                    <div class="cont shades s2" hidden="yes"></div>
+                    <div class="cont shades s3" hidden="yes"></div>
+                </div>
+                <div class="cont tags th-10 s0" hidden="yescon">
+                    <div class="cont shades s1" hidden="yes"></div>
+                    <div class="cont shades s2" hidden="yes"></div>
+                    <div class="cont shades s3" hidden="yes"></div>
+                </div>
+            </div>
+        <div class="cont themer -f">
+            <img src="theme.png" alt="" class="img theme_icon">
+        </div>
+    </footer>
+</body>
+<script src="script.js"></script>
+</html>
