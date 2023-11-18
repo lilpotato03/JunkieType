@@ -41,8 +41,13 @@ theme_button.addEventListener('click',themes_display)
 function take_input(){
     document.addEventListener('keydown',function keypress(Event){
         key=Event.key
-        if(key==='Tab'||key==='Ctrl'||key==='Alt'||key==='Shift'){
-            
+        if(key==='Ctrl'||key==='Alt'||key==='Shift'){
+
+        }
+        else if(key==='Tab'){
+            stop_timer()
+            reset_timer()
+            reset_text()
         }
         else{
             set_timer()
