@@ -1,6 +1,7 @@
 //selecting elements
 const typingarea=document.querySelector('.typingtext')
 const body=document.querySelector('body')
+const theme=body.getAttribute('class')
 let texts=document.querySelector('.maintype')
 let actual=document.createElement('div')
 const keys=document.querySelectorAll('.key')
@@ -21,6 +22,7 @@ let pointer=1
 let timevalue=0.0
 let timerid=''
 let timerflag=0
+let rtheme=0
 timer.textContent=timevalue.toFixed(1)
 const texts_temp=document.createElement('p')
 texts_temp.classList.add('correct')
@@ -132,12 +134,14 @@ function add_key(key){
             if(para[pointer-1]===' '){
                 addkey.innerHTML=para[pointer]
                 addkey.setAttribute('class','start correct')
+                addkey.setAttribute('style',"color:var(--t"+(rtheme%7)+");")
                 actualkey.innerHTML=key
                 actualkey.setAttribute('class','correct start')
             }
             else{
             addkey.innerHTML=para[pointer]
             addkey.setAttribute('class','correct')
+            addkey.setAttribute('style',"color:var(--t"+(rtheme%7)+");")
             actualkey.innerHTML=key
             actualkey.setAttribute('class','correct')
             }
@@ -146,24 +150,27 @@ function add_key(key){
             if(para[pointer-1]===' '){
             addkey.innerHTML=para[pointer]
             addkey.setAttribute('class','start incorrect')
+            addkey.setAttribute('style',"color:var(--incorrect);")
             actualkey.innerHTML=key
             actualkey.setAttribute('class','incorrect start')
             }
             else if(para[pointer]===' '){
                 addkey.innerHTML='&nbsp;'
                 addkey.setAttribute('class','incorrect end')
-                addkey.setAttribute('style','background-color:var(--incorrect)')
+                addkey.setAttribute('style','background-color:var(--incorrect);')
                 actualkey.innerHTML=key
                 actualkey.setAttribute('class','incorrect end')
             }
             else{
             addkey.innerHTML=para[pointer]
             addkey.setAttribute('class','incorrect')
+            addkey.setAttribute('style',"color:var(--incorrect);")
             actualkey.innerHTML=key
             actualkey.setAttribute('class','incorrect')
             }
         }
         pointer++
+        rtheme++
         temp.appendChild(addkey)
         actual.appendChild(actualkey)
         texts.innerHTML=temp.innerHTML
@@ -212,6 +219,7 @@ function add_key(key){
         texts.removeChild(texts.lastChild)
         actual.removeChild(actual.lastChild)
         textptags[pointer].removeAttribute('style')
+        rtheme--
         pointer--
     }
     else if(key==='Shift')
@@ -263,18 +271,33 @@ function timer_config(){
 //moves the cursor while typing
 function move_cursor(pointer){
     const textptags=backtype.querySelectorAll('p')
-    if(pointer===0){
-        textptags[0].setAttribute("style","text-decoration: underline;text-decoration-thickness:1px;text-decoration-color:var(--cursor);text")
-    }
-    else if(pointer==para.length-1){
+    if(theme==='th-11'){
+        if(pointer===0){
+            textptags[0].setAttribute("style","text-decoration: underline;text-decoration-thickness:1px;text-decoration-color:var(--t"+(rtheme%7)+");")
+            console.log(textptags[0].getAttribute('style'))
+        }
+        else if(pointer==para.length-1){
 
+        }
+        else{
+            textptags[pointer].setAttribute("style","text-decoration: underline;text-decoration-thickness:1px;text-decoration-color:var(--t"+(rtheme%7)+");")
+            for(let i=0;i<pointer;i++)
+                textptags[i].removeAttribute('style')
+        }
     }
     else{
-        textptags[pointer].setAttribute("style","text-decoration: underline;text-decoration-thickness:1px;text-decoration-color:var(--cursor);text")
-        for(let i=0;i<pointer;i++)
-            textptags[i].removeAttribute('style')
+        if(pointer===0){
+            textptags[0].setAttribute("style","text-decoration: underline;text-decoration-thickness:1px;text-decoration-color:var(--cursor);")
+        }
+        else if(pointer==para.length-1){
+
+        }
+        else{
+            textptags[pointer].setAttribute("style","text-decoration: underline;text-decoration-thickness:1px;text-decoration-color:var(--cursor);")
+            for(let i=0;i<pointer;i++)
+                textptags[i].removeAttribute('style')
+        }
     }
-    
 }
 //used to select the words for paragraph
 function select_words(para){

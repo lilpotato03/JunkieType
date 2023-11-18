@@ -83,6 +83,21 @@
     --incorrect:rgb(255,0,0);
     
 }
+.th-11{
+    --bg:rgb(63, 63, 63);
+    --sec:rgb(35, 35, 35);
+    --text:rgb(209, 209, 209);
+    --t0:rgb(169, 188, 255);
+    --t1:rgb(154, 255, 255);
+    --t2:rgb(24, 255, 177);
+    --t3:rgb(255, 255, 173);
+    --t4:rgb(255, 212, 147);
+    --t5:rgb(255, 159, 140);
+    --t6:rgb(255, 189, 218);
+    --passage_text:rgb(142, 139, 139);
+    --incorrect:rgb(255,0,0);
+    --cursor:rgb(43, 43, 43);
+}
 .apply_secondary{
     background-color: var(--sec);
 }
@@ -163,7 +178,7 @@ p{
 }
 .maintyping{
     flex: 0.7;
-    font-size: small;
+    font-size:larger;
 }
 .keys{
     flex:0.75;
@@ -249,17 +264,34 @@ p{
 }
 .correct{
     color: var(--text);
-    margin-top: 2px;
-    margin-bottom: 2px;
-    width:8px;
+    margin-top: 1px;
+    margin-bottom: 1px;
+    width:13px;
     display: flex;
     justify-content: center;
 }
 .incorrect{
-    width:8px;
+    width:13px;
     color: var(--incorrect);
-    margin-top: 2px;
+    margin-top: 1px;
     margin-bottom: 2px;
+    display: flex;
+    justify-content: center;
+}
+.backed{
+    width:13px;
+    color: var(--passage_text);
+    margin-top: 1px;
+    margin-bottom: 1px;
+    display: flex;
+    justify-content: center;
+}
+.filler{
+    color: var(--text);
+    margin-top: 1px;
+    margin-bottom: 1px;
+    width:13px;
+    text-decoration: none;
     display: flex;
     justify-content: center;
 }
@@ -268,15 +300,7 @@ p{
     flex-wrap: wrap;
     inline-size:70vw;
     flex-direction:row;
-    gap:2px;
-}
-.backed{
-    width:8px;
-    color: var(--passage_text);
-    margin-top: 2px;
-    margin-bottom: 2px;
-    display: flex;
-    justify-content: center;
+    gap:1px;
 }
 .small-logo,.user{
     height: 4vh;
@@ -329,15 +353,6 @@ div[hidden="yescon"]{
     filter: brightness(0.7);
     transform: translateY(2px);
 }
-.filler{
-    color: var(--text);
-    margin-top: 2px;
-    margin-bottom: 2px;
-    width:8px;
-    text-decoration: none;
-    display: flex;
-    justify-content: center;
-}
 .result{
     flex: 0.4;
     width:70vw;
@@ -349,6 +364,15 @@ div[hidden="yescon"]{
     justify-content: center;
     align-items: center;
     height:4vh;
+    
+}
+.rainbow{
+    background-image:url('Pastel Rainbow.jpg');
+    margin-top: 6px;
+    margin-bottom: 6px;
+}
+div[hidden="yescon"][class='cont tags th-11 rainbow']{
+    background-image: none;
     
 }
 
