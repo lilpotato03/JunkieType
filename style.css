@@ -119,6 +119,8 @@ body{
     margin:0;
     padding:0;
     overflow: hidden;
+    font-family:'Rethink Sans', sans-serif;
+    font-size:17.5px;
 }
 .header{
     background-color: var(--sec);
